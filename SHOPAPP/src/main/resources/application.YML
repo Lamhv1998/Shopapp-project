@@ -1,0 +1,21 @@
+spring:
+      datasource:
+            url: jdbc:mysql://localhost:3306/shopapp
+            username: root
+            password: root
+            driver-class-name: com.mysql.cj.jdbc.Driver
+
+      jpa:
+            hibernate:
+                  ddl-auto: update  # Options: 'validate', 'create', 'create-drop', 'update'
+            show-sql: true  # Display SQL statements in the console
+            database-platform: org.hibernate.dialect.MySQL8Dialect
+
+api:
+       prefix: api/v1
+jwt:
+      expiration: 2592000
+      #30 days = 30*24*60*60
+      secretKey: ighlOPOM3WAcontmUStYaYPdYq9WhTQRnMRD9ET0yo5mLnIBHBrfcQQZg2YgVmB04w9JstUmWSUljg2D62plVg
+server:
+      port: 8080

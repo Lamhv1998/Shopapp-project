@@ -1,0 +1,74 @@
+<app-navbar></app-navbar>
+<div
+  id="intro"
+  class="bg-image vh-100"
+  style="
+    background-image: url('https://mdbootstrap.com/img/Photos/new-templates/psychologist/img1.jpg');
+  "
+>
+  <div class="mask" style="background-color: rgba(250, 182, 162, 0.15)"></div>
+</div>
+<style lang="scss">
+  .container {
+    text-align: center;
+    padding: 20px;
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+
+      .search-input {
+        width: 300px;
+        margin-right: 10px;
+        border: 2px solid black;
+        font-size: 20px;
+
+        &::placeholder {
+          opacity: 1;
+          background-color: white;
+        }
+      }
+      .product-category {
+        width: 300px;
+        border: 2px solid black;
+        font-size: 20px;
+      }
+    }
+  }
+  .product-item {
+    background-color: pink;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    /* img {
+      /* width: 300px; */
+    /* height: 300px;
+      object-fit: cover;
+    } */
+  }
+</style>
+<div class="container">
+  <div class="intro-section">
+    <h1>Đây là home</h1>
+    <p>Trang hiển thị các sản phẩm</p>
+    <p>Các bạn có thể vào đây mua</p>
+  </div>
+  <!-- ĐOẠN NÀY CÓ 1 Ô SEARCH BÊN TRÁI , 1 COMBOBOX BÊN PHẢI -->
+  <div class="search-box">
+    <input
+      type="text"
+      class="form-control search-input"
+      placeholder="Tìm sản phẩm"
+    />
+    <select name id class="form-control product-category">
+      <option selected value disabled>Danh mục sản phẩm</option>
+      <option value>Đồ Nam</option>
+      <option value>Đồ Nữ</option>
+      <option value>Đồ Trẻ em</option>
+    </select>
+  </div>
+  <app-product-list></app-product-list>
+</div>
